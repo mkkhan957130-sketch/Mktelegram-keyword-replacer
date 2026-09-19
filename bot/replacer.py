@@ -8,7 +8,7 @@ from typing import List, Sequence, Tuple
 
 
 def parse_pairs(text: str) -> List[Tuple[str, str]]:
-    """Mk&Sk,xyz&SK  or  OLD | NEW  or  multiple lines."""
+    """Sk&Mk,xyz&MK  or  OLD | NEW  or  multiple lines."""
     text = (text or "").strip()
     if text.startswith("/"):
         parts = text.split(maxsplit=1)
