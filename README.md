@@ -1,4 +1,4 @@
-# SK Keywords (Simple)
+# MK Keywords (Simple)
 
 Global keyword replacer for Telegram channels + private.
 
@@ -22,6 +22,6 @@ Repo root must contain `bot/` folder.
 ## Use
 
 - `/start` — buttons
-- Add: `Mk&Sk,xyz&SK` then Done
+- Add: `Sk&Mk,xyz&MK` then Done
 - Or `/addkeyword OLD | NEW`
 - Bot admin in channel → auto caption/PDF replace
