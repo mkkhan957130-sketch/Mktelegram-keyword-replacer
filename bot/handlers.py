@@ -108,8 +108,8 @@ async def _help_text(is_owner: bool) -> str:
         f"• Caption / text: only matching words change\n"
         f"• PDF: filename rename (order safe)\n\n"
         f"*Add keywords*\n"
-        f"`Mk&Sk,xyz&SK,1&2`\n"
-        f"Meaning: Mk→Sk, xyz→SK, 1→2\n"
+        f"`Sk&Mk,xyz&MK,1&2`\n"
+        f"Meaning: Sk→Mk, xyz→MK, 1→2\n"
         f"Or: `/addkeyword OLD | NEW`\n"
         f"Buttons: *Add Keywords* → type → *Done*\n\n"
         f"*Commands (Admin + Owner)*\n"
@@ -258,7 +258,7 @@ async def on_cb(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
         await q.edit_message_text(
             "➕ *Add keywords*\n\n"
             "Send one or more lines:\n"
-            "`Mk&Sk,xyz&SK,1&2`\n\n"
+            "`Sk&Mk,xyz&MK,1&2`\n\n"
             "You can send multiple messages.\n"
             "When finished tap *Done*.",
             parse_mode=ParseMode.MARKDOWN,
@@ -314,7 +314,7 @@ async def on_add_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int
     pairs = parse_pairs(update.message.text or "")
     if not pairs:
         await update.message.reply_text(
-            "Format: `Mk&Sk,xyz&SK`",
+            "Format: `Sk&Mk,xyz&MK`",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=done_kb(),
         )
@@ -342,7 +342,7 @@ async def addkeyword_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     if not pairs:
         await update.message.reply_text(
             "Usage:\n`/addkeyword OLD | NEW`\n"
-            "or `/addkeyword Mk&Sk,xyz&SK`",
+            "or `/addkeyword Sk&Mk,xyz&MK`",
             parse_mode=ParseMode.MARKDOWN,
         )
         return
