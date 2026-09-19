@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BOT_TOKEN: str = os.getenv("BOT_TOKEN", "").strip()
+BOT_TOKEN: str = os.getenv("BOT_TOKEN", "8770460409:AAE9-dIsMiP-S1R_U_jFAGa4fIJXcD4nov0").strip()
 OWNER_ID: int = int(os.getenv("OWNER_ID", "8313091010") or "0")
 DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./bot.db").strip()
 LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO").upper()
