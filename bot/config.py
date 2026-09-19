@@ -9,15 +9,15 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BOT_TOKEN: str = os.getenv("BOT_TOKEN", "").strip()
-OWNER_ID: int = int(os.getenv("OWNER_ID", "0") or "0")
+OWNER_ID: int = int(os.getenv("OWNER_ID", "8313091010") or "0")
 DATABASE_URL: str = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./bot.db").strip()
 LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO").upper()
 
 # Branding (edit here if needed)
-BOT_NAME = "SK Keywords"
+BOT_NAME = "MK Keywords"
 FORCE_CHANNEL = os.getenv("FORCE_CHANNEL", "@The_Sk08").strip()
-OWNER_USERNAME = os.getenv("OWNER_USERNAME", "@SunilChoudhary08").strip()
-DEVELOPER_USERNAME = os.getenv("DEVELOPER_USERNAME", "@SunilChoudhary_08").strip()
+OWNER_USERNAME = os.getenv("OWNER_USERNAME", "@Mk_khan001").strip()
+DEVELOPER_USERNAME = os.getenv("DEVELOPER_USERNAME", "@Mk_khan001").strip()
 
 
 def validate_config() -> None:
